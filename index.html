@@ -1,0 +1,204 @@
+<!-- ========================= -->
+<!-- FILE : index.html -->
+<!-- HALAMAN BERANDA -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Perjalanan Hubungan</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- ========================= -->
+  <!-- HEADER -->
+  <!-- ========================= -->
+
+  <header>
+
+    <div class="header-content">
+
+      <h1>
+        Annisa Nurul Musthaina
+      </h1>
+
+      <p>
+        Wanita Pendek 145cm ( Vario aja 160 )
+      </p>
+
+      <!-- BUTTON -->
+      <a href="cerita.html" class="header-btn">
+        Lihat Cerita Kita
+      </a>
+
+    </div>
+
+  </header>
+
+  <!-- ========================= -->
+  <!-- FOTO UTAMA -->
+  <!-- ========================= -->
+
+  <section class="hero-photo">
+
+    <img src="assets/img/Foto Utama.jpg" alt="Foto Utama">
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- COUNTDOWN -->
+  <!-- ========================= -->
+
+  <section class="countdown-section">
+
+    <div class="countdown-box">
+
+      <h2>
+        Sudah Bersama Selama
+      </h2>
+
+      <p id="hari"></p>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- MENU -->
+  <!-- ========================= -->
+
+  <section class="menu-container">
+
+    <a href="tentang.html" class="card">
+
+      <h2>Tentang</h2>
+
+      <p>
+        Cerita singkat tentang hubungan kita
+      </p>
+
+    </a>
+
+    <a href="timeline.html" class="card">
+
+      <h2>Timeline</h2>
+
+      <p>
+        Perjalanan dari awal bertemu
+      </p>
+
+    </a>
+
+    <a href="galeri.html" class="card">
+
+      <h2>Galeri</h2>
+
+      <p>
+        Kumpulan foto kenangan
+      </p>
+
+    </a>
+
+    <a href="pesan.html" class="card">
+
+      <h2>Pesan</h2>
+
+      <p>
+        Pesan spesial untuk pasangan
+      </p>
+
+    </a>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- QUOTES -->
+  <!-- ========================= -->
+
+  <section class="quotes-home">
+
+    <div class="quotes-box">
+
+      <p>
+        “Distance means so little when someone means so much.”
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- PREVIEW GALERI -->
+  <!-- ========================= -->
+
+  <section class="preview-gallery">
+
+    <h2>
+      Kenangan Kita
+    </h2>
+
+    <div class="gallery-grid">
+
+      <img src="assets/img/Interview.jpg">
+      <img src="assets/img/foto2.jpg">
+      <img src="assets/img/foto3.jpg">
+      <img src="assets/img/foto4.jpg">
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+
+  <footer>
+
+    <p>
+      Dibuat dengan untuk Annisa
+    </p>
+
+  </footer>
+
+  <!-- ========================= -->
+  <!-- SCRIPT COUNTDOWN -->
+  <!-- ========================= -->
+
+  <script>
+
+    // TANGGAL JADIAN
+    const tanggalJadian =
+      new Date("2026-05-05");
+
+    // TANGGAL SEKARANG
+    const sekarang =
+      new Date();
+
+    // SELISIH
+    const selisih =
+      sekarang - tanggalJadian;
+
+    // HITUNG HARI
+    const hari =
+      Math.floor(
+        selisih / (1000 * 60 * 60 * 24)
+      );
+
+    // TAMPILKAN
+    document.getElementById("hari").innerHTML =
+      hari + " Hari";
+
+  </script>
+
+</body>
+
+</html>

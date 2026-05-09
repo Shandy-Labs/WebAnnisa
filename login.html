@@ -1,0 +1,102 @@
+<!-- ========================= -->
+<!-- FILE : login.html -->
+<!-- ========================= -->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <h1>Login Website</h1>
+
+            <p>Masukkan password</p>
+
+            <!-- PASSWORD BOX -->
+            <div class="password-box">
+
+                <input type="password" id="password" placeholder="Masukkan password">
+
+                <span onclick="togglePassword()" id="eye">
+                    👁
+                </span>
+
+            </div>
+
+            <button onclick="cekPassword()">
+                Masuk
+            </button>
+
+            <p id="error"></p>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // LOGIN PASSWORD
+        function cekPassword() {
+
+            // PASSWORD BENAR
+            const passwordBenar = "sayangaku";
+
+            // AMBIL INPUT
+            const inputPassword =
+                document.getElementById("password").value;
+
+            // CEK PASSWORD
+            if (inputPassword === passwordBenar) {
+
+                // PINDAH HALAMAN
+                window.location.href = "index.html";
+
+            } else {
+
+                document.getElementById("error").innerHTML =
+                    "Password salah!";
+
+            }
+
+        }
+
+        // SHOW HIDE PASSWORD
+        function togglePassword() {
+
+            const passwordInput =
+                document.getElementById("password");
+
+            const eye =
+                document.getElementById("eye");
+
+            if (passwordInput.type === "password") {
+
+                passwordInput.type = "text";
+                eye.innerHTML = "🙈";
+
+            } else {
+
+                passwordInput.type = "password";
+                eye.innerHTML = "👁";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
